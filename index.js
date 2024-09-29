@@ -1,5 +1,6 @@
 exports.AdyenBinLookup = require('./lib/AdyenBinLookup')
 exports.AdyenCheckout = require('./lib/AdyenCheckout')
 exports.AdyenDispute = require('./lib/AdyenDispute')
+exports.AdyenPayment = require('./lib/AdyenPayment')
 exports.AdyenPayout = require('./lib/AdyenPayout')
 exports.AdyenRecurring = require('./lib/AdyenRecurring')

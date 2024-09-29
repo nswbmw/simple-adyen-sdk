@@ -1,6 +1,6 @@
 {
   "name": "simple-adyen-sdk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple Node.js SDK for Adyen",
   "main": "index.js",
   "scripts": {
