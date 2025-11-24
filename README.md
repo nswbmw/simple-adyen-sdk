@@ -1,11 +1,17 @@
 ## simple-adyen-sdk
 
-Simple Node.js SDK for Adyen.
+Simple Adyen SDK for Node.js.
 
-### Usage
+### Install
+
+```sh
+$ npm i simple-adyen-sdk --save
+```
+
+### Example
 
 ```js
-const AdyenCheckout = require('simple-adyen-sdk').AdyenCheckout
+import { AdyenCheckout } from 'simple-adyen-sdk'
 
 const adyenCheckoutClient = new AdyenCheckout({
   apiKey: 'xxx',
@@ -15,7 +21,7 @@ const adyenCheckoutClient = new AdyenCheckout({
 
 ;(async () => {
   const res = await adyenCheckoutClient.execute({
-    method: 'post',
+    method: 'POST',
     url: '/paymentLinks',
     body: {
       amount: {
@@ -27,6 +33,20 @@ const adyenCheckoutClient = new AdyenCheckout({
       returnUrl: 'https://google.com/success'
     }
   })
+  /*
+  {
+    amount: { currency: 'USD', value: 999 },
+    expiresAt: '2025-11-25T03:16:06+01:00',
+    merchantAccount: 'YOUR_MERCHANT_ACCOUNT',
+    reference: 'YOUR_ORDER_NUMBER',
+    returnUrl: 'https://google.com/success',
+    reusable: false,
+    storePaymentMethodMode: 'disabled',
+    id: 'PL4379AD28135E7F32FDB526A',
+    status: 'active',
+    url: 'https://test.adyen.link/PL4379AD28135E7F32FDB526A'
+  }
+  */
   console.log(res)
 })().catch(console.error)
 ```
