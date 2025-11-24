@@ -26,36 +26,36 @@ export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' | 'HEAD'
 export interface ExecuteOptions {
   method?: HttpMethod
   url: string
-  headers?: Record<string, string>
+  headers?: Record<string, string | number | boolean>
   body?: any
 }
 
 export class AdyenBinLookup {
   constructor (options: AdyenServiceOptions)
-  execute (options: ExecuteOptions): Promise<any>
+  execute<T = any> (options: ExecuteOptions): Promise<T>
 }
 
 export class AdyenCheckout {
   constructor (options: AdyenServiceOptions)
-  execute (options: ExecuteOptions): Promise<any>
+  execute<T = any> (options: ExecuteOptions): Promise<T>
 }
 
 export class AdyenDispute {
   constructor (options: AdyenServiceOptions)
-  execute (options: ExecuteOptions): Promise<any>
+  execute<T = any> (options: ExecuteOptions): Promise<T>
 }
 
 export class AdyenPayment {
   constructor (options: AdyenServiceOptions)
-  execute (options: ExecuteOptions): Promise<any>
+  execute<T = any> (options: ExecuteOptions): Promise<T>
 }
 
 export class AdyenPayout {
   constructor (options: AdyenServiceOptions)
-  execute (options: ExecuteOptions): Promise<any>
+  execute<T = any> (options: ExecuteOptions): Promise<T>
 }
 
 export class AdyenRecurring {
   constructor (options: AdyenServiceOptions)
-  execute (options: ExecuteOptions): Promise<any>
+  execute<T = any> (options: ExecuteOptions): Promise<T>
 }
