@@ -45,7 +45,6 @@ class Adyen {
   }
 
   async execute ({ method = 'GET', url, headers = {}, body }) {
-    method = method.toUpperCase()
     const payload = {
       method,
       url: this._getURL(url),
